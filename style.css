@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* HERO */
+.hero {
+  padding: 80px 20px;
+  background: linear-gradient(120deg, #1e293b, #0f172a);
+}
+
+h1 {
+  font-size: 40px;
+  color: #38bdf8;
+  animation: fadeIn 2s ease-in-out;
+}
+
+button {
+  padding: 10px 20px;
+  background: #38bdf8;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: #0ea5e9;
+}
+
+/* SECTIONS */
+section {
+  padding: 40px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* FLOATING BOX ANIMATION (MOVING TOYS EFFECT) */
+.box {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  opacity: 0.7;
+  animation: float 8s linear infinite;
+}
+
+.b1 { background: #f97316; left: 10%; animation-delay: 0s; }
+.b2 { background: #22c55e; left: 25%; animation-delay: 2s; }
+.b3 { background: #3b82f6; left: 50%; animation-delay: 1s; }
+.b4 { background: #eab308; left: 70%; animation-delay: 3s; }
+.b5 { background: #a855f7; left: 85%; animation-delay: 4s; }
+
+/* FLOAT ANIMATION */
+@keyframes float {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+  }
+  50% {
+    transform: translateY(40vh) rotate(180deg);
+  }
+  100% {
+    transform: translateY(-120px) rotate(360deg);
+  }
+}
+
+/* FADE IN */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* FOOTER */
+footer {
+  padding: 20px;
+  background: #111827;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
